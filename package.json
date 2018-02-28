@@ -1,0 +1,13 @@
+{
+  "name": "webpack-delete-build-files",
+  "version": "1.0.0",
+  "description": "delete build hash file",
+  "main": "delete.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["delete hash file","prebuild"],
+  "author": "wangfpp@gmail.com",
+  "license": "ISC",
+  "repository" : "https://github.com/wangfpp/webpack-delete-build-files"
+}
