@@ -4,9 +4,16 @@
 # 2.使用说明
 	2.1:安装插件
 		npm install webpack-delete-build-files --save-dev
-	2.2:配置方法(修改webpack.conf.js)
-		const removeFiles = require('webpack-delete-build-files');
+	2.2:配置方法(修改webpack.dll.conf.js)
+		const removeFiles = require('webpack-delete-build-files');//引入插件
 		const perBuildDir = './static/js/';//要删除的文件目录(根据实际情况配置)
 		const excludeFiles = ['html2canvas.js','jsPdf.debug.min.js'];//要排除的文件 避免误删
 		......
-		new removeFiles(perBuildDir,excludeFiles)
+		module.exports = {
+			......
+			......
+			plugins : [
+				......
+				new removeFiles(perBuildDir,excludeFiles)
+			]
+		}
