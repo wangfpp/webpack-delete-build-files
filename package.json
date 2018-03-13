@@ -1,6 +1,6 @@
 {
   "name": "webpack-delete-build-files",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "delete build hash file",
   "main": "delete.js",
   "scripts": {
