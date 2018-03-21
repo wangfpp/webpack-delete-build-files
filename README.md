@@ -19,3 +19,4 @@
 		}
 # 3.其他说明
 [npm地址](https://www.npmjs.com/package/webpack-delete-build-files)
+[GitHub地址](https://github.com/wangfpp/webpack-delete-build-files)
