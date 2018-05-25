@@ -1,6 +1,9 @@
 # 1.插件说明
 	1.删除webpack预打包时产生的带有hash值的js文件
 	2.带有文件排除功能
+	
+![npm](https://img.shields.io/npm/dm/localeval.svg)
+
 # 2.使用说明
 	1.安装插件
 		npm install webpack-delete-build-files --save-dev
