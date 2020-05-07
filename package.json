@@ -8,7 +8,8 @@
   },
   "keywords": [
     "delete hash file",
-    "prebuild"
+    "prebuild",
+    "zk-tools"
   ],
   "author": "wangfpp@gmail.com",
   "license": "ISC",

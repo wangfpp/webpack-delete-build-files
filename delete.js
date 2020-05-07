@@ -1,19 +1,23 @@
 /*
 * @Author: wangfpp
 * @Date:   2018-02-28 11:11:50
-* @Last Modified by:   wangfpp
-* @Last Modified time: 2018-05-09 15:28:09
+ * @Last Modified by: wangfpp
+ * @Last Modified time: 2020-05-07 11:35:37
 */
 var fs = require("fs");
 var path = require("path");
 
-function DeleteBuildFiles(filePath,excludeFiles) {//filePath string 指定要删除的文件目录  excludeFiles  Array 要排除的文件
+/**
+ * 
+ * @param {String} filePath 指定要删除的文件目录 
+ * @param {Array} excludeFiles  要排除的文件
+ */
+function DeleteBuildFiles(filePath,excludeFiles) {
     this.filePath = filePath;
-    this.excludeFiles = excludeFiles ? excludeFiles : [];
+    this.excludeFiles = (excludeFiles && Array.isArray(excludeFiles)) ? excludeFiles : [];
 }; 
 DeleteBuildFiles.prototype.apply = function(compile) {
-    filePath = this.filePath;
-    excludeFiles = this.excludeFiles;
+    let { filePath, excludeFiles } = this;
     compile.plugin('done', function (compat) {
         const newlyCreatedAssets = compat.compilation.assets;
         const removeFiles = [];
